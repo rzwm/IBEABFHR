@@ -8,10 +8,10 @@ Automatically enhance image brightness based on fast haze removal[1]. Support 24
 + x64
 
 ## Effect Display
-![2.jpg](http://github.com/rzwm/IBEABFHR/raw/master/images/2.jpg)
-![2_brighten.jpg](http://github.com/rzwm/IBEABFHR/raw/master/images/2_brighten.jpg)
-![2_gray.jpg](http://github.com/rzwm/IBEABFHR/raw/master/images/2_gray.jpg)
-![2_gray_brighten.jpg](http://github.com/rzwm/IBEABFHR/raw/master/images/2_gray_brighten.jpg)
+![2.jpg](https://github.com/rzwm/IBEABFHR/raw/master/images/2.jpg)
+![2_brighten.jpg](https://github.com/rzwm/IBEABFHR/raw/master/images/2_brighten.jpg)
+![2_gray.jpg](https://github.com/rzwm/IBEABFHR/raw/master/images/2_gray.jpg)
+![2_gray_brighten.jpg](https://github.com/rzwm/IBEABFHR/raw/master/images/2_gray_brighten.jpg)
 
 ## Reference
 
