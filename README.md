@@ -24,6 +24,8 @@ resolution | type | time
 4160x2340 | gray | 104.57ms
 4160x2340 | color | 186.14ms
 
+The times above are the average time for call `brighten`100  times. If you just call `brighten` one times, the run time will be larger, because the first time doing image invert operation consumes extra time for unknown reason.
+
 ## Adjust Parameters
 
 There has two variable parameters :
