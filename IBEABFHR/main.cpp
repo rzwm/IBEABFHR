@@ -1,6 +1,7 @@
 #include <iostream>
 #include "opencv2/highgui/highgui.hpp"
 #include "image_brighten.h"
+#include "Timer.h"
 
 int main()
 {
@@ -13,7 +14,9 @@ int main()
 	}
 
 	cv::Mat image_brighten;
+	Timer timer;
 	brighten(image, image_brighten);
+	timer.toc("brighten");
 
 	cv::imshow("Original image", image);
 	cv::imshow("Brighten image", image_brighten);

@@ -40,14 +40,14 @@ void ImageBrighten::fastHazeRemoval_1Channel(const cv::Mat& src, cv::Mat& dst)
 
 	// step 3. calc M_ave(x)
 	cv::Mat M_ave;
-	const int radius = std::max(50, std::max(H.rows, H.cols) / 20);
+	const int radius = std::max(50, std::max(H.rows, H.cols) / 20); // should not be too small, or there will be a halo artifact 
 	cv::boxFilter(M, M_ave, -1, cv::Size(2 * radius + 1, 2 * radius + 1));
 
 	// step 4. calc m_av
 	const float m_av = float(cv::mean(M)[0] / 255.0);
 
 	// step 5. calc L(x)
-	const float p = 1.0f - m_av + 0.9f;
+	const float p = 1.0f - m_av + 0.9f; // a simple parameter selection strategy, for reference only
 	const float coeff = std::min(p * m_av, 0.9f);
 	cv::Mat L(H.size(), CV_32FC1);
 	for (int y = 0; y < L.rows; ++y)
@@ -110,14 +110,14 @@ void ImageBrighten::fastHazeRemoval_3Channel(const cv::Mat& src, cv::Mat& dst)
 
 	// step 3. calc M_ave(x)
 	cv::Mat M_ave;
-	const int radius = std::max(50, std::max(H.rows, H.cols) / 20);
+	const int radius = std::max(50, std::max(H.rows, H.cols) / 20); // should not be too small, or there will be a halo artifact 
 	cv::boxFilter(M, M_ave, -1, cv::Size(2 * radius + 1, 2 * radius + 1));
 
 	// step 4. calc m_av
 	const float m_av = float(cv::mean(M)[0] / 255.0);
 
 	// step 5. calc L(x)
-	const float p = 1.0f - m_av + 0.9f;
+	const float p = 1.0f - m_av + 0.9f; // a simple parameter selection strategy, for reference only
 	const float coeff = std::min(p * m_av, 0.9f);
 	cv::Mat L(H.size(), CV_32FC1);
 	for (int y = 0; y < L.rows; ++y)
